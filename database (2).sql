@@ -1,6 +1,6 @@
 USE [QL_Salon30Shines]
 GO
-/****** Object:  Table [dbo].[chitiethoadon]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[chitiethoadon]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15,7 +15,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[ChucVu]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[ChucVu]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -30,7 +30,7 @@ CREATE TABLE [dbo].[ChucVu](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[dichvu]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[dichvu]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -46,7 +46,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[hoadon]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[hoadon]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -63,6 +63,8 @@ CREATE TABLE [dbo].[hoadon](
 	[mastylist] [int] NOT NULL,
 	[gio] [char](8) NULL,
 	[ngaybatdau] [date] NULL,
+	[madv] [int] NULL,
+	[manv] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[mahd] ASC
@@ -72,7 +74,7 @@ PRIMARY KEY CLUSTERED
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[KhachHang]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[KhachHang]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -97,7 +99,7 @@ PRIMARY KEY CLUSTERED
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[khuvuc]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[khuvuc]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -113,7 +115,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[lichcat_stylist]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[lichcat_stylist]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -135,7 +137,7 @@ PRIMARY KEY CLUSTERED
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[ManHinh]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[ManHinh]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -150,7 +152,7 @@ CREATE TABLE [dbo].[ManHinh](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[nhanvien]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[nhanvien]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -162,13 +164,17 @@ CREATE TABLE [dbo].[nhanvien](
 	[hoten] [nvarchar](50) NULL,
 	[sdt] [char](11) NULL,
 	[masalon] [int] NULL,
-	[tendangnhap] [char](50) NULL
+	[tendangnhap] [char](50) NULL,
+ CONSTRAINT [PK_nhanvien] PRIMARY KEY CLUSTERED 
+(
+	[manv] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[PhanQuyen]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[PhanQuyen]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -184,7 +190,7 @@ CREATE TABLE [dbo].[PhanQuyen](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[salon]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[salon]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -201,7 +207,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[stylist]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[stylist]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -222,7 +228,7 @@ PRIMARY KEY CLUSTERED
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 8/7/2020 9:19:06 PM ******/
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 8/12/2020 9:36:01 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -258,28 +264,21 @@ INSERT [dbo].[dichvu] ([madv], [gia], [chitiet]) VALUES (4, 250, N'Combo cắt t
 SET IDENTITY_INSERT [dbo].[dichvu] OFF
 SET IDENTITY_INSERT [dbo].[hoadon] ON 
 
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (1, 1, 150000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (2, 2, 150000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (3, 2, 150000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (9, 2, 150000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (10, 2, 200000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (11, 2, 200000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (24, 1, 200000, CAST(0x66410B00 AS Date), N'Đã thanh toán', 1, 7, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (26, 1, 200000, CAST(0x67410B00 AS Date), N'Đã thanh toán', 5, 1, NULL, NULL)
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (27, 2, 200000, CAST(0x68410B00 AS Date), N'Đã thanh toán', 1, 7, N'8:30    ', CAST(0x68410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (30, 2, 200000, CAST(0x6A410B00 AS Date), N'Chưa thanh toán', 1, 7, N'12:30   ', CAST(0x69410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (31, 2, 200000, CAST(0x6B410B00 AS Date), N'Chưa thanh toán', 1, 7, N'9:30    ', CAST(0x69410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (36, 2, 200000, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'12:30   ', CAST(0x6A410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (37, 2, 200000, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'13:00   ', CAST(0x6A410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (38, 2, 200000, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'9:00    ', CAST(0x6A410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (39, 2, 150000, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'13:00   ', CAST(0x6B410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (40, 2, 150000, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'13:00   ', CAST(0x6B410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (41, 2, 250, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'13:30   ', CAST(0x6A410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (42, 2, 200000, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'14:00   ', CAST(0x6A410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (43, 2, 250, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'9:30    ', CAST(0x6B410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (44, 2, 250, CAST(0x69410B00 AS Date), N'Chưa thanh toán', 5, 1, N'10:00   ', CAST(0x6B410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (45, 2, 200000, CAST(0x6A410B00 AS Date), N'Chưa thanh toán', 5, 2, N'9:30    ', CAST(0x6A410B00 AS Date))
-INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau]) VALUES (46, 2, 150000, CAST(0x6B410B00 AS Date), N'Chưa thanh toán', 5, 1, N'9:00    ', CAST(0x6C410B00 AS Date))
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (49, 2, 150000, CAST(0x6C410B00 AS Date), N'Đã thanh toán', 1, 7, N'9:30    ', CAST(0x6C410B00 AS Date), 2, 2)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (50, 2, 150000, CAST(0x6D410B00 AS Date), N'Đã thanh toán', 1, 7, N'9:00    ', CAST(0x6D410B00 AS Date), 2, 2)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (51, 2, 150000, CAST(0x6D410B00 AS Date), N'Đã thanh toán', 5, 1, N'9:00    ', CAST(0x6D410B00 AS Date), 2, 2)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (52, 2, 100000, CAST(0x6D410B00 AS Date), N'Chưa thanh toán', 5, 2, N'9:00    ', CAST(0x6D410B00 AS Date), 1, 2)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (53, 2, 150000, CAST(0x6D410B00 AS Date), N'Đã thanh toán', 5, 4, N'13:30   ', CAST(0x6E410B00 AS Date), 2, 2)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (54, 1, 200000, CAST(0x6E410B00 AS Date), N'Chưa thanh toán', 1, 22, N'13:00   ', CAST(0x6F410B00 AS Date), 3, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (55, 1, 200000, CAST(0x6E410B00 AS Date), N'Đã thanh toán', 1, 22, N'11:00   ', CAST(0x70410B00 AS Date), 3, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (56, 2, 200000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 2, 12, N'9:00    ', CAST(0x71410B00 AS Date), 3, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (57, 2, 200000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 2, 11, N'9:00    ', CAST(0x71410B00 AS Date), 3, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (58, 2, 150000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 3, 14, N'13:00   ', CAST(0x71410B00 AS Date), 2, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (59, 2, 150000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 3, 14, N'9:00    ', CAST(0x70410B00 AS Date), 2, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (60, 2, 150000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 3, 15, N'8:30    ', CAST(0x70410B00 AS Date), 2, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (61, 2, 150000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 4, 18, N'9:00    ', CAST(0x71410B00 AS Date), 2, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (62, 2, 150000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 4, 18, N'12:00   ', CAST(0x70410B00 AS Date), 2, 4)
+INSERT [dbo].[hoadon] ([mahd], [makh], [tongtien], [thoigian], [tinhtrang], [masalon], [mastylist], [gio], [ngaybatdau], [madv], [manv]) VALUES (63, 2, 150000, CAST(0x70410B00 AS Date), N'Chưa thanh toán', 1, 9, N'12:30   ', CAST(0x71410B00 AS Date), 2, 4)
 SET IDENTITY_INSERT [dbo].[hoadon] OFF
 SET IDENTITY_INSERT [dbo].[KhachHang] ON 
 
@@ -287,6 +286,7 @@ INSERT [dbo].[KhachHang] ([makh], [email], [sdt], [hoten], [ngaysinh], [diachi],
 INSERT [dbo].[KhachHang] ([makh], [email], [sdt], [hoten], [ngaysinh], [diachi], [taikhoan], [matkhau]) VALUES (2, N'quan@gmail.com      ', N'123        ', N'Huỳnh Thanh Tuấn', CAST(0xC4240B00 AS Date), N'Hồ Chí Minh', N'toan                ', N'123                 ')
 INSERT [dbo].[KhachHang] ([makh], [email], [sdt], [hoten], [ngaysinh], [diachi], [taikhoan], [matkhau]) VALUES (3, N'lechitoan@gmail.com ', N'08771212   ', N'Lê Chí Toàn', CAST(0x66230B00 AS Date), N'Hồ Chí Minh', N'len                 ', N'123                 ')
 INSERT [dbo].[KhachHang] ([makh], [email], [sdt], [hoten], [ngaysinh], [diachi], [taikhoan], [matkhau]) VALUES (4, N'quan12yt@gmail.com  ', N'1234       ', N'Phạm Quang Minh', CAST(0x66410B00 AS Date), N'Bình Chánh, Hồ Chí Minh', N'quan12yta           ', N'123                 ')
+INSERT [dbo].[KhachHang] ([makh], [email], [sdt], [hoten], [ngaysinh], [diachi], [taikhoan], [matkhau]) VALUES (5, N'quan12yt@gmail.com  ', N'123123213  ', N'Pham Van Quan', CAST(0x9C2A0B00 AS Date), N'Ho chi minh', N'hao123              ', N'quanpro99           ')
 SET IDENTITY_INSERT [dbo].[KhachHang] OFF
 INSERT [dbo].[khuvuc] ([tentp], [tenqh]) VALUES (N'Hà Nội', N'Ba Đình')
 INSERT [dbo].[khuvuc] ([tentp], [tenqh]) VALUES (N'Hà Nội', N'Hoàn Kiếm')
@@ -315,11 +315,27 @@ INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x69410
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x69410B00 AS Date), 1, N'14:00   ')
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x69410B00 AS Date), 1, N'8:30    ')
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x69410B00 AS Date), 1, N'9:30    ')
-INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x69410B00 AS Date), 7, N'12:30   ')
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x69410B00 AS Date), 7, N'9:30    ')
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6A410B00 AS Date), 2, N'9:30    ')
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6B410B00 AS Date), 1, N'10:00   ')
 INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6C410B00 AS Date), 1, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6C410B00 AS Date), 7, N'9:30    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6D410B00 AS Date), 1, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6D410B00 AS Date), 2, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6D410B00 AS Date), 7, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6D410B00 AS Date), 8, N'9:30    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6E410B00 AS Date), 1, N'9:30    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6E410B00 AS Date), 4, N'13:30   ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x6F410B00 AS Date), 22, N'13:00   ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x70410B00 AS Date), 14, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x70410B00 AS Date), 15, N'8:30    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x70410B00 AS Date), 18, N'12:00   ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x70410B00 AS Date), 22, N'11:00   ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x71410B00 AS Date), 9, N'12:30   ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x71410B00 AS Date), 11, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x71410B00 AS Date), 12, N'9:00    ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x71410B00 AS Date), 14, N'13:00   ')
+INSERT [dbo].[lichcat_stylist] ([ngay], [mastylist], [gio]) VALUES (CAST(0x71410B00 AS Date), 18, N'9:00    ')
 SET IDENTITY_INSERT [dbo].[ManHinh] ON 
 
 INSERT [dbo].[ManHinh] ([mamh], [tenmh]) VALUES (1, N'Stylist')
@@ -328,18 +344,26 @@ INSERT [dbo].[ManHinh] ([mamh], [tenmh]) VALUES (3, N'Khách hàng')
 INSERT [dbo].[ManHinh] ([mamh], [tenmh]) VALUES (4, N'Salon')
 INSERT [dbo].[ManHinh] ([mamh], [tenmh]) VALUES (5, N'Nhân viên')
 INSERT [dbo].[ManHinh] ([mamh], [tenmh]) VALUES (6, N'Thống kê')
+INSERT [dbo].[ManHinh] ([mamh], [tenmh]) VALUES (7, N'Hóa đơn')
 SET IDENTITY_INSERT [dbo].[ManHinh] OFF
 SET IDENTITY_INSERT [dbo].[nhanvien] ON 
 
 INSERT [dbo].[nhanvien] ([manv], [hoten], [sdt], [masalon], [tendangnhap]) VALUES (2, N'Phạm Văn Quân', N'0961148368 ', 1, N'quan12yta                                         ')
 INSERT [dbo].[nhanvien] ([manv], [hoten], [sdt], [masalon], [tendangnhap]) VALUES (3, N'Hồ Quang Nguyên', N'0872323121 ', 2, N'quan12yt                                          ')
+INSERT [dbo].[nhanvien] ([manv], [hoten], [sdt], [masalon], [tendangnhap]) VALUES (4, N'Trịnh Nhật Hào', N'091232138  ', 5, N'hao123                                            ')
+INSERT [dbo].[nhanvien] ([manv], [hoten], [sdt], [masalon], [tendangnhap]) VALUES (5, N'Huỳnh Tấn Đạt', N'0961237    ', 5, N'dat123                                            ')
+INSERT [dbo].[nhanvien] ([manv], [hoten], [sdt], [masalon], [tendangnhap]) VALUES (6, N'Hồ Đắc Di', N'0987654312 ', 1, N'di123                                             ')
+INSERT [dbo].[nhanvien] ([manv], [hoten], [sdt], [masalon], [tendangnhap]) VALUES (7, N'Hồ Chí Lên', N'0987897977 ', 1, N'len123                                            ')
 SET IDENTITY_INSERT [dbo].[nhanvien] OFF
 INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (1, 1)
 INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (1, 4)
+INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (1, 5)
 INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (1, 6)
 INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (2, 2)
 INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (2, 3)
+INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (2, 7)
 INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (3, 6)
+INSERT [dbo].[PhanQuyen] ([machucvu], [mamh]) VALUES (3, 7)
 SET IDENTITY_INSERT [dbo].[salon] ON 
 
 INSERT [dbo].[salon] ([masalon], [tentp], [tenqh], [diachi]) VALUES (1, N'Hồ Chí Minh', N'Bình Chánh', N'14, Nữ Dân Công')
@@ -371,9 +395,13 @@ INSERT [dbo].[stylist] ([mastylist], [masalon], [name], [sdt]) VALUES (18, 4, N'
 INSERT [dbo].[stylist] ([mastylist], [masalon], [name], [sdt]) VALUES (21, 4, N'Nguyễn Tuấn Anh', N'098123213      ')
 INSERT [dbo].[stylist] ([mastylist], [masalon], [name], [sdt]) VALUES (22, 1, N'Trịnh Nhật Hào', N'0987112309     ')
 SET IDENTITY_INSERT [dbo].[stylist] OFF
+INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'dat123                                            ', N'123                                               ', 1, 2)
+INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'di123                                             ', N'quanpro99                                         ', 1, 2)
+INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'hao123                                            ', N'123                                               ', 1, 2)
+INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'len123                                            ', N'quanpro99                                         ', 1, 3)
 INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'quan                                              ', N'123                                               ', 1, 3)
 INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'quan12yt                                          ', N'123                                               ', 0, 2)
-INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'quan12yta                                         ', N'123                                               ', 1, 1)
+INSERT [dbo].[TaiKhoan] ([TenDangNhap], [MatKhau], [HoatDong], [machucvu]) VALUES (N'quan12yta                                         ', N'quanpro99                                         ', 1, 1)
 ALTER TABLE [dbo].[chitiethoadon]  WITH CHECK ADD FOREIGN KEY([madv])
 REFERENCES [dbo].[dichvu] ([madv])
 GO
@@ -388,6 +416,16 @@ REFERENCES [dbo].[salon] ([masalon])
 GO
 ALTER TABLE [dbo].[hoadon]  WITH CHECK ADD FOREIGN KEY([mastylist])
 REFERENCES [dbo].[stylist] ([mastylist])
+GO
+ALTER TABLE [dbo].[hoadon]  WITH CHECK ADD  CONSTRAINT [FK_hoadon_dichvu] FOREIGN KEY([madv])
+REFERENCES [dbo].[dichvu] ([madv])
+GO
+ALTER TABLE [dbo].[hoadon] CHECK CONSTRAINT [FK_hoadon_dichvu]
+GO
+ALTER TABLE [dbo].[hoadon]  WITH CHECK ADD  CONSTRAINT [FK_hoadon_nhanvien] FOREIGN KEY([manv])
+REFERENCES [dbo].[nhanvien] ([manv])
+GO
+ALTER TABLE [dbo].[hoadon] CHECK CONSTRAINT [FK_hoadon_nhanvien]
 GO
 ALTER TABLE [dbo].[lichcat_stylist]  WITH CHECK ADD FOREIGN KEY([mastylist])
 REFERENCES [dbo].[stylist] ([mastylist])
