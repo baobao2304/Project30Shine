@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "557297925733",
+    "firebase_url": "https://project30shine.firebaseio.com",
+    "project_id": "project30shine",
+    "storage_bucket": "project30shine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557297925733:android:3daef1935cde56ba99908c",
+        "android_client_info": {
+          "package_name": "com.example.a30shineproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557297925733-48uh8issuv9eqtmpkqq2bmvc2tj7ehcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwN2FwIGCC6MKa8uTEixyk1znFeFsDZEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557297925733-48uh8issuv9eqtmpkqq2bmvc2tj7ehcs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

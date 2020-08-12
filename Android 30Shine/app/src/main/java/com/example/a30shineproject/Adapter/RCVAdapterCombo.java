@@ -74,7 +74,7 @@ public class RCVAdapterCombo extends RecyclerView.Adapter<RCVAdapterCombo.MyView
         holder.setItemClickListener(new ItemClickComboListener() {
             @Override
             public void onClick(View view, int position) {
-//                holder.rdoCombo.setChecked(true);
+                holder.rdoCombo.setChecked(true);
 //                holder.imgCombo.setAlpha((float) 1.0);
 
 
@@ -88,15 +88,18 @@ public class RCVAdapterCombo extends RecyclerView.Adapter<RCVAdapterCombo.MyView
                     myViewHolder = holder;
                 }
                 if(myViewHolder != null){
+
                     mData.get(position).setCheckCombo(1);
                     holder.imgCombo.setAlpha((float) 1.0);
                     holder.rdoCombo.setChecked(true);
 
                     mData.get(id).setCheckCombo(0);
-                    myViewHolder.rdoCombo.setChecked(false);
-                    myViewHolder.imgCombo.setAlpha((float) 0.6);
-                    myViewHolder = null;
-                    myViewHolder = holder;
+                    if(myViewHolder != holder && id != position ){
+                        myViewHolder.rdoCombo.setChecked(false);
+                        myViewHolder.imgCombo.setAlpha((float) 0.6);
+                        myViewHolder = null;
+                        myViewHolder = holder;
+                    }
                 }
                 id = position;
                 checkSelectedItem = 1;

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+android:background="@android:color/black"
+tools:context=".MainActivityBill">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left">
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/_bg_circle_black"
+            android:src="@drawable/ic_outline_home_24"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:layout_marginLeft="90dp"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/_bg_white_radius_top"
+        android:gravity="top">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="CẢM ƠN ANH ĐÃ ĐẶT LỊCH CẮT TÓC TẠI"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30SHINE!"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN ĐẶT LỊCH"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            />
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_calendar"
+                />
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ngày"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/txtDay"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12-12-1212"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_calendar"
+                />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30Shine đã xếp Stylist tốt nhất cho anh."
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey"/>
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_calendar"
+                />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30Shine.com"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_calendar"
+                />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sđt"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_calendar"
+                />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.30 - 21:00"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_calendar"
+                />
+            <TextView
+                android:id="@+id/txtTenPhuongQuan"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phường quận"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MỖI SĐT CHỈ DÀNH CHO 1 NGƯỜI"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(*) Nếu cất nhiều người , anh/chị vui lòng dùng SĐT khác để đặt thêm 1 lần nữa hoặc gọi tới hotline để dược sắp xếp giúp em!"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+</LinearLayout>
