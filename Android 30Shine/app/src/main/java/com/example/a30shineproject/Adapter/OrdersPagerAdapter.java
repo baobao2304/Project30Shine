@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.a30shineproject.TabHome.BlankFragmentHome;
+import com.example.a30shineproject.TabHome.BlankFragmentMaster;
 import com.example.a30shineproject.TabHome.BlankFragmentMenu;
+import com.example.a30shineproject.TabHome.BlankFragmentStore;
 
 public class OrdersPagerAdapter extends FragmentStateAdapter {
 
@@ -21,14 +23,12 @@ public class OrdersPagerAdapter extends FragmentStateAdapter {
         switch (position){
             case 0:
                 return new BlankFragmentHome();
+            case 1:
+                return new BlankFragmentMaster();
+            case 2:
+                return new BlankFragmentStore();
             case 3:
                 return new BlankFragmentMenu();
-//            case 2:
-//                return new BlankFragmentTimKiem();
-//            case 3:
-//                return new BlankFragmentThongBao();
-//            case 4:
-//                return new BlankFragmentCaNhan();
             default:
                 return new BlankFragmentMenu();
         }

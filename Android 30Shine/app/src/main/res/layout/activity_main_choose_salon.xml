@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivityChooseSalon">
+
+    <LinearLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src= "@drawable/_imgchoosesalon1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src = "@drawable/_imgcarsstop"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gần salon có bãi gửi ô tô (mất phí)"
+                android:textSize="13dp"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Spinner
+                android:layout_margin="5dp"
+                android:background="@drawable/_custom_spinner"
+                android:id="@+id/spinnerTP"
+                android:layout_width="180dp"
+                android:layout_height="35dp"/>
+            <Spinner
+                android:layout_margin="5dp"
+                android:background="@drawable/_custom_spinner"
+                android:id="@+id/spinnerHuyen"
+                android:layout_width="180dp"
+                android:layout_height="35dp"/>
+        </LinearLayout>
+        <ScrollView
+            android:background="@drawable/round_rect_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnArrowBack"
+            android:layout_width="130dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_background_gradient_blackwhite"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24_white"
+            android:text="Quay Lại"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnArrowForward"
+            android:layout_marginLeft="60dp"
+            android:padding="10dp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_background_gradient_blackwhite"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24_white"
+            android:textSize="13dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Tiếp Theo"/>
+    </LinearLayout>
+</LinearLayout>

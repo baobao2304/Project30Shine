@@ -2,4 +2,49 @@
     <string name="app_name">30ShineProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="thanhpho">
+        <item>TP. Hồ Chí Minh</item>
+        <item>TP. Hà Nội</item>
+        <item>TP. Biên Hòa</item>
+        <item>TP. Cần Thơ</item>
+        <item>TP. Hải Phòng</item>
+        <item>TP. Vinh</item>
+        <item>TP. Đà Nẵng</item>
+        <item>Tỉnh An Giang</item>
+        <item>Tỉnh Bình Dương</item>
+        <item>Tỉnh Bắc Ninh</item>
+        <item>Tỉnh Cà Mau</item>
+        <item>Tỉnh Đắc Lắk</item>
+        <item>Tỉnh Long An</item>
+        <item>Tỉnh Quảng Ninh</item>
+        <item>Tỉnh Kiên Giang</item>
+        <item>Tỉnh Khánh Hòa</item>
+        <item>Tỉnh Thanh Hóa</item>
+        <item>Tỉnh Thái Nguyên</item>
+        <item>Tỉnh Tiền Giang</item>
+        <item>Tỉnh Vũng Tàu</item>
+    </string-array>
+    <string-array name="huyen">
+        <item>TP. Hồ Chí Minh</item>
+        <item>TP. Hà Nội</item>
+        <item>TP. Biên Hòa</item>
+        <item>TP. Cần Thơ</item>
+        <item>TP. Hải Phòng</item>
+        <item>TP. Vinh</item>
+        <item>TP. Đà Nẵng</item>
+        <item>Tỉnh An Giang</item>
+        <item>Tỉnh Bình Dương</item>
+        <item>Tỉnh Bắc Ninh</item>
+        <item>Tỉnh Cà Mau</item>
+        <item>Tỉnh Đắc Lắk</item>
+        <item>Tỉnh Long An</item>
+        <item>Tỉnh Quảng Ninh</item>
+        <item>Tỉnh Kiên Giang</item>
+        <item>Tỉnh Khánh Hòa</item>
+        <item>Tỉnh Thanh Hóa</item>
+        <item>Tỉnh Thái Nguyên</item>
+        <item>Tỉnh Tiền Giang</item>
+        <item>Tỉnh Vũng Tàu</item>
+    </string-array>
 </resources>

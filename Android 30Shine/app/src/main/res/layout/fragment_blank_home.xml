@@ -21,7 +21,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/_bg_circle"
-            android:src="@drawable/Person"
+            android:src="@drawable/_person"
             />
         <LinearLayout
             android:layout_marginLeft="10dp"
@@ -53,6 +53,9 @@
         android:gravity="center"
         android:orientation="horizontal">
         <LinearLayout
+            android:id="@+id/lnOrderDay"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_margin="10dp"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -63,18 +66,20 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Calendar"
+                android:src="@drawable/_calendar"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đặt lịch"
+                android:text="ĐẶT LỊCH"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textColor="@android:color/black"
                 />
         </LinearLayout>
         <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_margin="10dp"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -82,21 +87,24 @@
             android:background="@drawable/round_rect_shape"
             android:gravity="center"
             >
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Calendar"
-                />
+                android:src="@drawable/_store" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đặt lịch"
+                android:text="MUA HÀNG"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textColor="@android:color/black"
                 />
         </LinearLayout>
         <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_margin="10dp"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -107,18 +115,20 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Calendar"
+                android:src="@drawable/_history"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đặt lịch"
+                android:text="LỊCH SỬ"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textColor="@android:color/black"
                 />
         </LinearLayout>
         <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_margin="10dp"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -129,29 +139,119 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Calendar"
+                android:src="@drawable/_notification"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đặt lịch"
+                android:text="THÔNG BÁO"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textColor="@android:color/black"
                 />
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lnVoteFelling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/round_rect_shape"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MỜI ANH ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxWidth="340dp"
+                    android:text="Phản   hồi   của    anh   sẽ   giúp   chúng   em   cải   thiện   chất   lượng   dịch   vụ   tốt   hơn" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/_star" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/_star" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/_star" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/_star" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/_star" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="50"
+                app:iss_delay="1000"
+                app:iss_period="2000" />
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:textColor="@android:color/black"
+                />
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="50"
+                app:iss_delay="1000"
+                app:iss_period="2000" />
         </LinearLayout>
-    </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
 </LinearLayout>

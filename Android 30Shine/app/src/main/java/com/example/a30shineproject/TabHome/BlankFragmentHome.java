@@ -1,5 +1,6 @@
 package com.example.a30shineproject.TabHome;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,16 +8,31 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.a30shineproject.MainActivityChooseSalon;
+import com.example.a30shineproject.MainActivityHome;
 import com.example.a30shineproject.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link BlankFragmentHome#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragmentHome extends Fragment {
+public class BlankFragmentHome extends Fragment  {
     private View v;
+    private ImageSlider imageSlider,imageSlider2;
+    private LinearLayout lnOrderDay;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -71,13 +87,41 @@ public class BlankFragmentHome extends Fragment {
         return v;
     }
     private void AnhXa(){
+        imageSlider = (ImageSlider) v.findViewById(R.id.imageSlider);
+        imageSlider2 = (ImageSlider) v.findViewById(R.id.imageSlider2);
+        lnOrderDay = (LinearLayout) v.findViewById(R.id.lnOrderDay);
+
 
     }
     private void Handle(){
         HandleEvent();
+        handleImageSlider();
     }
     private void HandleEvent(){
-
+        lnOrderDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainActivityChooseSalon.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    private void handleImageSlider(){
+        List<SlideModel> slideModels = new ArrayList<>();
+        slideModels.add(new SlideModel(R.drawable._imgpa1, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable._imgpa2,ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable._imgpa3, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable._imgpa4, ScaleTypes.FIT));
+        imageSlider.setImageList(slideModels,ScaleTypes.FIT);
+
+        List<SlideModel> slideModels2 = new ArrayList<>();
+        slideModels2.add(new SlideModel(R.drawable._imgpa5, ScaleTypes.FIT));
+        slideModels2.add(new SlideModel(R.drawable._imgpa5,ScaleTypes.FIT));
+        slideModels2.add(new SlideModel(R.drawable._imgpa5, ScaleTypes.FIT));
+        slideModels2.add(new SlideModel(R.drawable._imgpa5, ScaleTypes.FIT));
+        imageSlider2.setImageList(slideModels,ScaleTypes.FIT);
+    }
+
 
 }

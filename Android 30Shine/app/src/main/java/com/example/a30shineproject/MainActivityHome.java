@@ -26,6 +26,7 @@ import java.util.List;
 public class MainActivityHome extends AppCompatActivity {
     private ViewPager2 viewPager;
     public static TabLayout tabLayout;
+    private TabLayout.Tab tab;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_home);
@@ -84,11 +85,13 @@ public class MainActivityHome extends AppCompatActivity {
                         break;
                     }
                     case 1: {
-                        tab.setText("");
+                        tab.setText("Style Master");
+                        tab.setIcon(R.drawable.ic_outline_shutter_speed_24);
                         break;
                     }
                     case 2: {
-                        tab.setText("");
+                        tab.setText("30Shine Store");
+                        tab.setIcon(R.drawable.ic_outline_smoking_rooms_24);
                         break;
                     }
                     case 3: {
@@ -108,27 +111,30 @@ public class MainActivityHome extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                TabLayout.Tab tab;
-
                 if(viewPager.getCurrentItem() == 0 ){
                     tabLayout.getTabAt(0).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-//                    tabLayout.getTabAt(0).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-//                    tabLayout.getTabAt(0).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
                     tabLayout.getTabAt(3).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
-
-//                    tabLayout.getTabAt(0).setCustomView()
-
-
+                    tabLayout.getTabAt(1).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(2).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
                 }
                 if(viewPager.getCurrentItem() == 3 ){
                     tabLayout.getTabAt(3).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-//                    tabLayout.getTabAt(0).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-//                    tabLayout.getTabAt(0).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
                     tabLayout.getTabAt(0).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(1).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(2).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
 
-//                    tabLayout.getTabAt(0).setCustomView()
-
-
+                }
+                if(viewPager.getCurrentItem() == 1){
+                    tabLayout.getTabAt(3).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(0).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(1).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(2).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                }
+                if(viewPager.getCurrentItem() == 2){
+                    tabLayout.getTabAt(3).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(0).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(1).getIcon().setColorFilter(Color.DKGRAY, PorterDuff.Mode.SRC_IN);
+                    tabLayout.getTabAt(2).getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
                 }
                 tabLayout.setTabTextColors(getResources().getColor(R.color.colorBlackFill),
                         getResources().getColor(R.color.colorWhite));

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    >
+    <ImageView
+        android:id="@+id/imgPerson"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:padding="2dp"
+        android:src="@drawable/_person2"
+        />
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mặc định"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/txtNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thợ lần trước"
+        />
+</LinearLayout>
