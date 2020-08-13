@@ -18,7 +18,10 @@ namespace _30ShineAPi.Model
         }
 
         public DbSet<StylistModel> stylist { get; set; }
-
+        public DbSet<KhachHangModel> KhachHang { get; set; }
+        public DbSet<LichCatStylistModel> lichcat_stylist { get; set; }
+        public DbSet<SalonModel> salon { get; set; }
+        public DbSet<KhuVucModel> khuvuc { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

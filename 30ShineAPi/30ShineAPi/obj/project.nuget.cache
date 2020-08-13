@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3R8C1qu+oxLVUFrnkEKfM3jBcxFQ2+UiBexMyI1X4PDQV7ImonbC3HMMqXBzdxvtdM/hfJCjplbmNAN8pA8gFA==",
+  "dgSpecHash": "J4+IIvaLz0ZuoPp2NWfMFHydWuUryqnPGNNu0EabthocOWuOSJFtBW7uk5OuIqOm6zZwNaP/Gcs21t1jyKbafg==",
   "success": true,
-  "projectFilePath": "D:\\CODE\\ASP.net\\Web\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj",
+  "projectFilePath": "D:\\CODE\\AndroidStudio\\git Android 30Shine PR\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

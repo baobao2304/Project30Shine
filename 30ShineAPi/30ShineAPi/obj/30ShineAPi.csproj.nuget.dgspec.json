@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CODE\\ASP.net\\Web\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj": {}
+    "D:\\CODE\\AndroidStudio\\git Android 30Shine PR\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj": {}
   },
   "projects": {
-    "D:\\CODE\\ASP.net\\Web\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj": {
+    "D:\\CODE\\AndroidStudio\\git Android 30Shine PR\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CODE\\ASP.net\\Web\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj",
+        "projectUniqueName": "D:\\CODE\\AndroidStudio\\git Android 30Shine PR\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj",
         "projectName": "30ShineAPi",
-        "projectPath": "D:\\CODE\\ASP.net\\Web\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj",
+        "projectPath": "D:\\CODE\\AndroidStudio\\git Android 30Shine PR\\30ShineAPi\\30ShineAPi\\30ShineAPi.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\CODE\\ASP.net\\Web\\30ShineAPi\\30ShineAPi\\obj\\",
+        "outputPath": "D:\\CODE\\AndroidStudio\\git Android 30Shine PR\\30ShineAPi\\30ShineAPi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
